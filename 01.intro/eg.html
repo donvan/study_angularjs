@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app>
+    <head>
+    	<meta charset="UTF-8"/>
+    	<title>第一个例子</title>
+        <script src="../angular-1.0.1.min.js"></script>
+        <style type="text/css">
+        	.des{margin-top:2em;padding:1em 2em;background-color:#f1f1f1;font-size: 62.5%;color:#333;}
+        	.des li{line-height:1.6em;list-style: decimal;list-style-position: outside;}
+        </style>
+    </head>
+    <body>
+    	<h3>AngularJS双向数据绑定的概念, 输入框的任何更改会立即反映到模型变量（一个方向），模型变量的任何更改都会立即反映到问候语文本中（另一方向）</h3>
+        Your name: <input type="text" ng-model="yourname" placeholder="World">
+        <hr>
+        Hello {{yourname || 'World'}}!
+        
+        <div class="des">
+        	<ul>
+        		<li>标记ng-app告诉AngularJS处理整个HTML页并引导应用</li>
+        		<li>文本输入指令&lt;input ng-model="yourname" /&gt;绑定到一个叫yourname的模型变量</li>
+        		<li>双大括号标记将yourname模型变量添加到问候语文本</li>
+        	</ul>
+        	
+        </div>
+    </body>
+</html>
